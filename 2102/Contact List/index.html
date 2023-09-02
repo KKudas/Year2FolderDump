@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact List</title>
+</head>
+<body>
+    <script src="script.js"></script> 
+    <h2><center>Contact List</center></h2>
+
+    <!-- TABLE -->
+    <center>
+    <table class="list" id="contactList">
+        <thead>
+            <tr>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>Email</th>
+                <th>Contact</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    </center>
+   
+    <!-- FORM --><br>
+    <div><center>
+
+        <form onsubmit="event.preventDefault();onFormSubmit();" id="form">
+            <!-- FIRST NAME -->
+            <label for="fname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+            <!-- LAST NAME -->
+            <label for="lname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <!-- EMAIL -->
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email" required><br>
+            <!-- CONTACT -->
+            <label for="contact">Contact Number:</label><br>
+            <input type="text" id="contact" name="contact"><br>
+
+            <!-- SUBMIT -->
+            <button type="submit">Submit</button></center>
+        </form>
+    </div>
+
+
+</body>
+</html>
