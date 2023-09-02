@@ -9,7 +9,7 @@ Requirements:
 
 4. Delete functionality to delete contacts (individually).
 
-5. Use <table>. Make the UI presentable.
+5. Use table tag. Make the UI presentable.
 
 Note:
-Modal was shown in the presentation but unfortunately it is absent in this files
+Modal was shown in the presentation but unfortunately, it is absent in this files
