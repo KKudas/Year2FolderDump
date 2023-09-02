@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <title>Information Table</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Table of Contents</h1>
+
+    <!-- Event listener -->
+    <script src="method.js"></script>
+
+    <!--List information-->
+    <table class="table table-striped ">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Last name</th>
+                <th>First Name</th>
+                <th>Email address</th>
+                <th>Contact Number</th>
+                <th>Update Info</th>
+            </tr>
+        </thead>
+
+        <!-- Array List -->
+        <script>
+            setTimeout(() => {
+                for(var i = 0; i < userList.length; i++){
+                    html += '<tr>';
+                    html += '<td>' += i + '<t/td>';
+                    // html += '<td>' += userList[i].lastName;
+                    // html += '<td>'
+                    // html += '<td>'
+                    // html += '<td>'
+                }
+            }, 500);
+        </script>
+    </table>
+
+    <button type="button" class="btn btn-primary " onclick="openForm()">Add</button>
+    
+
+
+    <!-- FORM HERE -->
+    <form class="form-popup" id="myForm">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">First Name</span>
+            <input type="text" class="form-control" id="fName">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Last Name</span>
+            <input type="text" class="form-control" id="lName">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+            <input type="text" class="form-control" id="email" required>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Contact Number</span>
+            <input type="text" class="form-control" id="contactNum">
+        </div>
+        <button type="button" class="btn btn-primary" onclick="closeForm()">Submit</button>                         
+    </form>
+
+</body>
+</html>
