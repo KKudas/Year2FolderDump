@@ -1,2 +1,4 @@
 # 2101 
-Linked Lists, Execution Stack, and something else...
+- Execution Stack
+- Pointer to node
+- Pointer to Pointer to node
