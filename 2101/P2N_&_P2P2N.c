@@ -26,8 +26,8 @@ int main() {
 
 void findElem(List *A, int find){
   // Another way to declare pointer to pointer to node and pointer to node
-  // List *p = &A; //P2N
-  // List q = *A;  //P2P2N
+  // List *p = &A; //P2P2N
+  // List q = *A;  //P2N
   List *p;
   List q;
   
