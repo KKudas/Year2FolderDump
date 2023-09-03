@@ -31,8 +31,8 @@ void findElem(List *A, int find){
   List *p;
   List q;
   
-  p = A;  // P2N
-  q = *A; // P2P2N
+  p = A;  // P2P2N
+  q = *A; // P2N
 
   printf("char %c\n", find);  
   printf("char %c", q->elem);
