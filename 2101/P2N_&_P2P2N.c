@@ -6,6 +6,12 @@ typedef struct node{
 } *List;
 
 int main() {
+  //List L is a singly linked list with nodes that has the element H, O, P
+  /* Visualization:
+   _____       _______________________      _______________________      _______________________
+  |  L  |---> |  [elem: 'H'] [ Link-]-|--> |  [elem: 'O'] [ Link-]-|--> |  [elem: 'P'] [ Link-]-|--> NULL
+   ‾‾‾‾‾       ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾      ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾      ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+  */
   List L = (struct node*)malloc(sizeof(struct node));
   L->elem = 'H';
   L->link = (struct node*)malloc(sizeof(struct node));
