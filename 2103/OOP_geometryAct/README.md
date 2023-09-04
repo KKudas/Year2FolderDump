@@ -19,4 +19,4 @@
   3. returns 5 if in x-axis
   4. returns 6 if in y-axis
 - <b>getAngle()</b>
-  1. returns the agnel formed from the positive x-axis
+  1. returns the angle formed from the positive x-axis
