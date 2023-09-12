@@ -1,14 +1,29 @@
-<?php
-include 'methodPHP/connectDB.php';
+<?php 
+$id = $_COOKIE['updateID?'];
+if (isset($_POST['submit'])){
+    $lname = $_POST['lastName'];
+    $fname = $_POST['firstName'];
+    $email = $_POST['email'];
+    $contact = $_POST['contact'];
 
-$sqlquery = "SELECT * FROM contact ORDER BY last_name ASC";
-$retval = mysqli_query($conn, $sqlquery);
+    $sql = "UPDATE contact SET first_name = $fname, last_name = $lname, email = $email, contact_num = $contact WHERE id' = $id";
+    
+    $result = $conn->query($sql);
 
-if(!$retval){
-    die('Could not get data: ' . mysql_error());
+    if ($result == TRUE) {
+        header("Location: index.php");
+    }else{
+        echo "Error:". $sql . "<br>". $conn->error;
+    }
+    
+} else {
+    // echo 'not work';
 }
 
-while($row = mysqli_fetch_array($retval, MYSQLI_ASSOC)){
+$sqlquery = "SELECT * FROM contact WHERE id = $id";
+$retval = mysqli_query($conn, $sqlquery);
+
+$row = mysqli_fetch_array($retval, MYSQLI_ASSOC);
 ?>
 
 <div id="simpleUpdateModal" class="updateModal">
@@ -27,21 +42,3 @@ while($row = mysqli_fetch_array($retval, MYSQLI_ASSOC)){
         </form>
     </div>
 </div>
-
-<?php
-}
-if (isset($_POST['updatesubmit'])){
-    $lname = $_POST['lastName'];
-    $fname = $_POST['firstName'];
-    $email = $_POST['email'];
-    $contact = $_POST['contact'];
-
-    $sql = "UPDATE `contact` SET `first_name`='$fname',`last_name`='$lname',`email`='$email',`contact_num`='$contact' WHERE id=$id";
-    
-    $result = $conn->query($sql);
-
-    
-} else {
-    // echo 'not work';
-}
-?>
